@@ -13,7 +13,6 @@ function basePath($path = '')
 }
 
 
-
 /**
  * Load a view
  * 
@@ -45,4 +44,30 @@ function loadPartial($name)
     } else {
         echo "View {$partialPath} not found";
     }
+}
+
+
+/**
+ * Inspect value(s)
+ * @param mixed $vale
+ * @return void
+ */
+function inspect($value)
+{
+    echo '<pre>';
+    var_dump($value);
+    echo '</pre>';
+}
+
+
+/**
+ * Inspect value(s) and die
+ * @param mixed $vale
+ * @return void
+ */
+function inspectAndDie($value)
+{
+    echo '<pre>';
+    die(var_dump($value));
+    echo '</pre>';
 }
